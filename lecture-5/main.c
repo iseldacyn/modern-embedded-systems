@@ -40,9 +40,7 @@ int main() {
     return 0;
 }
 
-/* wait some time before next task
- * volatile prevents delay from being removed with high compiler optimization
- */
+/* volatile prevents delay from being removed with high compiler optimization */
 void delay() {
     for( volatile int i = 0; i < 1000000; i++ );
 }

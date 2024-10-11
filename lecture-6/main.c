@@ -62,7 +62,6 @@ int main() {
     return 0;
 }
 
-/* wait some time before next task */
 void delay() {
     for( volatile int i = 0; i < 1000000; i++ );
 }

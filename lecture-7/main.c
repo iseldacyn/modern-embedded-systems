@@ -6,7 +6,6 @@
  
  #include "lm4f120h5qr.h"
 
-/* Use bits to define LED colors */
 #define LED_RED     (1U << 1)
 #define LED_BLUE    (1U << 2)
 #define LED_GREEN   (1U << 3)
