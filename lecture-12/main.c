@@ -4,7 +4,7 @@
  */
 #include <stdint.h>
  
-#include "tm4c_cmsis.h"
+#include "TM4C123GH6PM.h"
 #include "delay.h"
 
 #define LED_RED     (1U << 1)
@@ -21,7 +21,7 @@ Point p1, p2;
 
 /* more complicated struct types
  * can be used to store register information for hardware blocks in CPU
- * see tm4c_cmsis.h as an example
+ * see TM4C123GH6PM.h as an example
  */
 typedef struct {
     Point top_left;
@@ -64,7 +64,7 @@ int main() {
     (*wp).top_left = *pp;
     wp->top_left = *pp;
     
-    /* register information now accessed through structs defined in tm4c_cmsis.h */
+    /* register information now accessed through structs defined in TM4C123GH6PM.h */
     SYSCTL->RCGC2 |= (1U << 5);
     SYSCTL->GPIOHSCTL |= (1U << 5);
     GPIOF_AHB->DIR |= (LED_RED | LED_BLUE | LED_GREEN);
